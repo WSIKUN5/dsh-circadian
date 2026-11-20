@@ -1,0 +1,60 @@
+{
+  "name": "dsh-circadian",
+  "version": "1.0.0",
+  "private": false,
+  "description": "给 DeepSeek Harness 里的 agent 一副人的作息：会犯困、到点去睡、早上醒、被硬叫醒会烦；输入框下沿一条作息条",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "WSIKUN5",
+  "homepage": "https://github.com/WSIKUN5/dsh-circadian#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WSIKUN5/dsh-circadian.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WSIKUN5/dsh-circadian/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "circadian",
+    "sleep",
+    "persona",
+    "agent"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "lib/*.js",
+    "locale/*.json",
+    "icon.svg",
+    "docs/*.png",
+    "integrations/**/*.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node test/schedule-check.mjs && node test/apply-check.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

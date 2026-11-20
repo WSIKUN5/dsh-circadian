@@ -1,0 +1,37 @@
+# dsh-circadian —— 给 agent 一副人的作息
+#
+# 会困、到点去睡、早上醒、被硬叫醒会烦、睡不够会发钝。
+# 宿主半负责算状态 / 注入 / 工具 / /api/circadian；界面半在输入框下沿画一条作息条。
+#
+# 参数说明（改完重启 DSH 生效）：
+#   title                     面板标题，默认「作息」
+#   bedtime / wakeTime        平时的睡与醒（HH:MM）
+#   jitterMinutes             每天抖多少分钟（0 = 机器作息，一天一个点）
+#   weekendShiftMinutes       周五周六的夜里晚睡多少、周末早上赖多少
+#   napStart / napMinutes     午睡窗口与时长
+#   napChance                 有几天会午睡（0–1）
+#   napEnabled                false = 完全不午睡
+#   drowsyMinutes             睡前多久开始犯困
+#   wakeGraceMinutes          醒后多久算"还没缓过来"
+#   targetSleepHours          每晚目标，用来算睡眠债
+#   injectContext             false = 只显示面板，不往提示里塞状态
+#   exposeTool                false = 不给她 circadian 工具（不能自己睡/起）
+- insert:
+    - id: circadian
+      name: dsh-circadian
+      config:
+        # 面板标题（默认「作息」；想改成别的就填这里）
+        # title: '作息'
+        bedtime: '00:40'
+        wakeTime: '07:30'
+        jitterMinutes: 25
+        weekendShiftMinutes: 40
+        napStart: '13:10'
+        napMinutes: 26
+        napChance: 0.6
+        napEnabled: true
+        drowsyMinutes: 60
+        wakeGraceMinutes: 25
+        targetSleepHours: 7.5
+        injectContext: true
+        exposeTool: true

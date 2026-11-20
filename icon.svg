@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Sleeping fish">
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="#12384f"/>
+  <!-- moon -->
+  <path d="M47 8.5a9.5 9.5 0 0 0 6.2 12.3A10.6 10.6 0 0 1 40 9.4a9.6 9.6 0 0 1 7-0.9Z" fill="#ffd479" opacity="0.95"/>
+  <!-- zzz -->
+  <path d="M36 21h6.5l-6.5 7h6.5" fill="none" stroke="#bfe3ff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/>
+  <!-- tail -->
+  <path d="M9 36c0-5 3.6-9 8.4-9.6L9 20.4A11.5 11.5 0 0 0 9 36Z" fill="#5fb6e8"/>
+  <!-- body -->
+  <path d="M56 34.6c0 8.4-8.6 14.4-19.6 14.4S16.8 43 16.8 34.6 25.4 20.2 36.4 20.2 56 26.2 56 34.6Z" fill="#7fd0ff"/>
+  <!-- closed eye -->
+  <path d="M27 32.4c1.9 2.1 5 2.1 6.9 0" fill="none" stroke="#12384f" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- fin -->
+  <path d="M34 42.6c3.4 2.6 7.2 2.2 9.4-0.6-2.4-2-6.4-2.2-9.4 0.6Z" fill="#5fb6e8" opacity="0.9"/>
+</svg>
